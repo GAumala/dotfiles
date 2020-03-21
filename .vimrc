@@ -72,6 +72,9 @@ set relativenumber
 
 filetype plugin on
 
+" gruvbox config
+let g:gruvbox_italic = "1"
+let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
 set background=dark    " Setting dark mode
 
@@ -81,3 +84,6 @@ set autoread
 " http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
 inoremap <c-w> <c-g>u<c-w>
 inoremap <c-u> <c-g>u<c-u>
+
+" automatically change working dir to active buffer's dir
+set autochdir
