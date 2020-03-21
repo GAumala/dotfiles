@@ -17,6 +17,9 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'udalov/kotlin-vim'
 Plugin 'fatih/vim-go'
 
+" status line
+Plugin 'scrooloose/syntastic'
+
 " language specific tools
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'Shougo/vimproc' "required by ghc-mod
@@ -45,6 +48,18 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 syntax on
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" always show powerline
 set laststatus=2
 
 " **Use spaces instead of tabs**
