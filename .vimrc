@@ -17,9 +17,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'udalov/kotlin-vim'
 Plugin 'fatih/vim-go'
 
-" status line
-Plugin 'scrooloose/syntastic'
-
 " language specific tools
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'Shougo/vimproc' "required by ghc-mod
@@ -27,10 +24,11 @@ Plugin 'eagletmt/ghcmod-vim'
 
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
 
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,9 +57,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" always show powerline
-set laststatus=2
-
 " **Use spaces instead of tabs**
 set tabstop=2       " The width of a TAB is set to 2.
                     " Still it is a \t. It is just that
@@ -87,11 +82,7 @@ set relativenumber
 
 filetype plugin on
 
-" gruvbox config
-let g:gruvbox_italic = "1"
-let g:gruvbox_guisp_fallback = "bg"
-colorscheme gruvbox
-set background=dark    " Setting dark mode
+colorscheme basic-dark
 
 " reload buffers from disk when they are updated externally
 set autoread
