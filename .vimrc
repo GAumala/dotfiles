@@ -82,7 +82,7 @@ set relativenumber
 
 filetype plugin on
 
-colorscheme basic-dark
+colorscheme Atelier_SavannaDark
 
 " reload buffers from disk when they are updated externally
 set autoread
