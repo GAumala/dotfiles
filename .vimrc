@@ -13,8 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " language support
 Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'udalov/kotlin-vim'
 Plugin 'fatih/vim-go'
 
 " language specific tools
@@ -26,7 +24,7 @@ Plugin 'eagletmt/ghcmod-vim'
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/syntastic'
+Plugin 'dense-analysis/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -47,15 +45,10 @@ filetype plugin indent on    " required
 "
 syntax on
 
-" syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" ALE settings
+let g:airline#extensions#ale#enabled = 1
+let b:ale_fixers = ['prettier']
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " **Use spaces instead of tabs**
 set tabstop=2       " The width of a TAB is set to 2.
@@ -93,3 +86,6 @@ inoremap <c-u> <c-g>u<c-u>
 
 " automatically change working dir to active buffer's dir
 set autochdir
+
+" don't show matching parenthesis
+let g:loaded_matchparen=1
