@@ -12,13 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " language support
-Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'fatih/vim-go'
-
-" language specific tools
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'Shougo/vimproc' "required by ghc-mod
-Plugin 'eagletmt/ghcmod-vim'
 
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -47,8 +42,7 @@ syntax on
 
 " ALE settings
 let g:airline#extensions#ale#enabled = 1
-let b:ale_fixers = ['prettier']
-
+let g:ale_fixers = {'javascript': ['prettier']}
 
 " **Use spaces instead of tabs**
 set tabstop=2       " The width of a TAB is set to 2.
@@ -74,8 +68,8 @@ set nu
 set relativenumber
 
 filetype plugin on
-
-colorscheme Atelier_SavannaDark
+colorscheme solarized
+set background=dark
 
 " reload buffers from disk when they are updated externally
 set autoread
@@ -89,3 +83,39 @@ set autochdir
 
 " don't show matching parenthesis
 let g:loaded_matchparen=1
+
+" show git diff with Ctrl+G
+function GitDiff()
+    :silent write
+    :silent execute '!git diff --color=always -- ' . expand('%:p') . ' | less --RAW-CONTROL-CHARS'
+    :redraw!
+endfunction
+nnoremap <leader>gd :call GitDiff()<cr>
+
+" This makes vim transparent in terminal by default
+hi Normal ctermbg=NONE
+
+" toggle transparency
+let t:is_transparent = 0
+function! Toggle_transparent()
+   if t:is_transparent == 0
+       if has ('gui_running')
+           " Sets gVim to transparent
+           :silent !transset -a --dec 0.15
+       else
+           " Sets vim to opaque
+           set background=dark
+       endif
+       let t:is_transparent = 1
+   else
+       if has ('gui_running')
+           " Sets gVim to opaque
+           :silent !transset -a --max 1
+       else
+           " Sets vim to transparent
+           hi Normal ctermbg=NONE
+       endif
+       let t:is_transparent = 0
+   endif
+endfunction
+nnoremap <C-t> :call Toggle_transparent()<CR>
