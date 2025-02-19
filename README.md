@@ -8,12 +8,14 @@ Tmux config requires `cmake` to be installed. (for `tmux-mem-cpu-load`)
 
 bash config requires `man-db` to be installed. (for `manpath` to show npm man pages)
 
+zsh config requires `python-pygments` to be installed. (for `colorize` plugin to show colored output)
+
 [Gogh](https://github.com/Gogh-Co/Gogh), requires `wget`, `dconf` and `util-linux-libs` to be installed.
 
 You can install all of this on Arch Linux with:
 
 ```
-pacman -S dconf util-linux-libs cmake man-db wget tmux zsh zsh-completions
+pacman -S dconf util-linux-libs cmake man-db wget tmux zsh zsh-completions python-pygments
 ```
 
 Also install oh-my-zsh from [the AUR](https://aur.archlinux.org/packages/oh-my-zsh-git)

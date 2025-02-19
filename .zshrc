@@ -1,5 +1,19 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# The ONLY text editor
+export EDITOR=vim;
+
+# Gopath
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
+#
+# add NPM binaries path
+NPM_PACKAGES=~/.npm-packages
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# add NPM man pages
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
