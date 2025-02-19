@@ -2,8 +2,7 @@
 
 My dot files.
 
-## New machine setup
-
+## System dependencies
 
 Tmux config requires `cmake` to be installed. (for `tmux-mem-cpu-load`)
 
@@ -14,8 +13,12 @@ bash config requires `man-db` to be installed. (for `manpath` to show npm man pa
 You can install all of this on Arch Linux with:
 
 ```
-pacman -S dconf util-linux-libs cmake man-db wget tmux
+pacman -S dconf util-linux-libs cmake man-db wget tmux zsh zsh-completions
 ```
+
+Also install oh-my-zsh from [the AUR](https://aur.archlinux.org/packages/oh-my-zsh-git)
+
+## New machine setup
 
 1. copy all dotfiles to `$HOME`
 2. Setup Vundle:
