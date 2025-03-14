@@ -1,0 +1,52 @@
+general.live_config_reload = true
+
+[window]
+dynamic_title = false
+opacity = 0.7
+decorations_theme_variant = "Dark"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "hack", style = "Regular" }
+size = 12
+
+[colors]
+draw_bold_text_with_bright_colors = true 
+cursor = {text = "CellBackground", cursor = "#D4BE98" }
+
+[colors.primary]
+background = "#282828"
+foreground = "#D4BE98"
+
+[colors.normal]
+black = "#3C3836"
+red = "#EA6962"
+green = "#A9B665"
+yellow = "#D8A657"
+blue = "#7DAEA3"
+magenta = "#D3869B"
+cyan = "#89B482"
+white = "#D4BE98"
+
+[colors.bright]
+black = "#3C3836"
+red = "#EA6962"
+green = "#A9B665"
+yellow = "#D8A657"
+blue = "#7DAEA3"
+magenta = "#D3869B"
+cyan = "#89B482"
+white = "#D4BE98"
+
+[bell]
+animation = "Linear"
+duration = 0
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = false
