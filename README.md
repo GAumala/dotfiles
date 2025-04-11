@@ -4,7 +4,8 @@ My dot files.
 
 ## System dependencies
 
-Tmux config requires `cmake` and a C++ compiler to be installed. (for `tmux-mem-cpu-load`)
+Tmux config requires `cmake` and a C++ compiler to be installed. (for `tmux-mem-cpu-load`).
+It also requires `xclip` to copy text to clipboard.
 
 bash config requires `man-db` to be installed. (for `manpath` to show npm man pages)
 
@@ -17,7 +18,7 @@ zsh config requires `python-pygments` to be installed. (for `colorize` plugin to
 You can install all of this on Arch Linux with:
 
 ```
-pacman -S dconf util-linux-libs cmake man-db wget tmux zsh zsh-completions python-pygments
+pacman -S dconf util-linux-libs cmake man-db wget tmux zsh zsh-completions python-pygments xclip
 ```
 
 Also install oh-my-zsh from [the AUR](https://aur.archlinux.org/packages/oh-my-zsh-git)
@@ -27,7 +28,7 @@ Also install oh-my-zsh from [the AUR](https://aur.archlinux.org/packages/oh-my-z
 On Debian you need to install more packages, but here's a simple one-liner:
 
 ```
-apt install build-essential cmake man-db python3-pygments wget curl dconf-cli uuid-runtime tmux vim git zsh
+apt install build-essential cmake man-db python3-pygments wget curl dconf-cli uuid-runtime tmux vim git zsh xclip
 ```
 
 Then, you have to install `oh-my-zsh` using [the website's shell script](https://ohmyz.sh/#install). Please note that this script installs `oh-my-zsh` at `$HOME/.oh-my-zsh`, which is different from the AUR PKGBUILD, so you have to update .zshrc accordingly (Verify the `$ZSH` var)
