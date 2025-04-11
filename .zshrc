@@ -122,3 +122,8 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# reaveal wifi password with "get-wifi-pass <ACCESS_POINT>"
+get-wifi-pass() {
+  nmcli -g 802-11-WIRELESS-SECURITY.PSK --show-secrets connection show "$@"
+}
