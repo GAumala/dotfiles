@@ -10,9 +10,8 @@ ZSH_THEME="agnoster"
 # Initialize zplug and plugins
 source ~/.zplug/init.zsh
 
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug 'dracula/zsh', as:theme
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -30,7 +29,7 @@ zplug load --verbose
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize sudo zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colorize sudo)
 
 # User configuration
 
