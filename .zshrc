@@ -16,8 +16,8 @@ source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:2
 zplug "zsh-users/zsh-completions"
-zplug "hlissner/zsh-autopair"  # Auto-close brackets/quotes
 
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 
@@ -40,3 +40,7 @@ export EDITOR=vim;
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
