@@ -95,11 +95,22 @@ require("lazy").setup({
         python = {'black', 'isort'},
         javascript = {'prettier'},
         typescript = {'prettier'},
+        clojure = {'cljfmt'},
         lua = {'stylua'},
       }
       vim.g.ale_fix_on_save = 1
     end,
   },
-  
+  {
+    "Olical/conjure",
+    ft = { "clojure" }, -- etc
+    lazy = true,
+    init = function()
+      -- Set configuration options here
+      -- Uncomment this to get verbose logging to help diagnose internal Conjure issues
+      -- This is VERY helpful when reporting an issue with the project
+      -- vim.g["conjure#debug"] = true
+    end,
+  },
   -- You can add more plugins following the same pattern
 })
