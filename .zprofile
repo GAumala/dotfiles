@@ -38,6 +38,15 @@ export LANG=en_US.UTF-8
 # The ONLY text editor
 export EDITOR=vim;
 
+# aliases
+alias vim='nvim'
+alias vi='nvim'
+alias nv='nvim'
+alias nvim-init='nvim ~/.config/nvim/init.lua'
+
+# OpenClaw Completion
+source "/Users/gabriel/.openclaw/completions/openclaw.zsh"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

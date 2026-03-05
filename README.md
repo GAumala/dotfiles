@@ -1,3 +1,3 @@
-# Server dotfiles
+# MacOS dotfiles
 
-Dotfiles for servers that aren't too uptight.
+Dotfiles for Macs.
