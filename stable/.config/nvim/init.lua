@@ -112,5 +112,8 @@ require("lazy").setup({
       -- vim.g["conjure#debug"] = true
     end,
   },
+  {
+    "sainnhe/everforest"
+  },
   -- You can add more plugins following the same pattern
 })

@@ -17,6 +17,20 @@
 # -----------------------------------------------------
 
 # -----------------------------------------------------
+# Distrobox Detection
+# -----------------------------------------------------
+
+if [[ -n "$DISTROBOX_ENTER_PATH" ]]; then
+  # We're in a distrobox container
+  
+  # Colored prompt: 📦 user@container
+  PROMPT="%F{blue}📦%f %F{green}%n%f@%F{cyan}${CONTAINER_ID}%f %F{yellow}%~%f %# "
+  
+  # Skip the rest of zshrc config
+  return 0
+fi
+
+# -----------------------------------------------------
 # Load modular configuration
 # -----------------------------------------------------
 
